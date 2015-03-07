@@ -3,8 +3,7 @@
   <groupId>test</groupId>
   <artifactId>test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-    <build>
+  <build>
   	<plugins>
   		<plugin>
   			<artifactId>maven-compiler-plugin</artifactId>
@@ -16,7 +15,9 @@
   		</plugin>
   	</plugins>
   </build>
-  
+  <properties>
+    <accumulo.version>1.5.0</accumulo.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
@@ -26,7 +27,7 @@
     <dependency>
       <groupId>org.apache.accumulo</groupId>
       <artifactId>accumulo-core</artifactId>
-      <version>1.5.0</version>
+      <version>${accumulo.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -36,7 +37,7 @@
     <dependency>
       <groupId>org.apache.accumulo</groupId>
       <artifactId>accumulo-minicluster</artifactId>
-      <version>1.5.0</version>
+      <version>${accumulo.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
